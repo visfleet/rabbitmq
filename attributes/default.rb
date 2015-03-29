@@ -4,6 +4,9 @@ default['rabbitmq']['version'] = '3.4.4'
 default['rabbitmq']['use_distro_version'] = false
 # Allow the distro version to be optionally pinned like the rabbitmq.com version
 default['rabbitmq']['pin_distro_version'] = false
+# if non-nil, will override the package download source. Will also install the
+# version in the package, ignoring node['rabbitmq']['version']
+default['rabbitmq']['package'] = nil
 
 # being nil, the rabbitmq defaults will be used
 default['rabbitmq']['nodename']  = nil
